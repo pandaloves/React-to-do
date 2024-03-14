@@ -11,14 +11,14 @@ const CompletedTask = ({ completedTask, deleteCompletedTask }) => {
       <div key={completedTask.id}>
         <div className="container mx-auto my-4 mb-1 min-w-64 max-w-sm">
           <input
-            className="w-48 h-6 mx-2  px-2 box-sizing border rounded-sm border-slate-500 text-xs"
+            className="w-48 h-6 mx-1 my-2 mr-1 px-2 box-sizing border rounded-sm border-slate-500 text-xs"
             type="text"
             value={completedTask.text}
             readOnly
           />
 
           <button
-            className="py-1 px-3  w-15 h-6 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75 text-xs"
+            className="py-1 px-3 my-2 mr-1 w-15 h-6 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75 text-xs"
             onClick={() => deleteCompletedTask(completedTask.id)}
           >
             Delete

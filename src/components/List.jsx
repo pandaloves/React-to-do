@@ -28,7 +28,7 @@ const List = ({
     <div className="flex flex-col gap-y-2 bg-green-600">
       {todos.length > 0 && (
         <div className="p-2 overflow-y-auto relative shadow rounded-xl ml-1 min-w-64 max-w-sm">
-          <h4 className="ml-2">Task(s) to do</h4>
+          <h4 className="ml-2 text-white">Task(s) to do</h4>
           {todos &&
             todos.map((todo) => (
               <TodoItem
@@ -48,7 +48,7 @@ const List = ({
       <div className="flex flex-col gap-y-2 bg-green-700">
         {completedTasks.length > 0 && (
           <div className="p-2 overflow-y-auto relative shadow rounded-xl ml-1 min-w-64 max-w-sm">
-            <h4>Task(s) done</h4>
+            <h4 className="text-white">Task(s) done</h4>
             {completedTasks &&
               completedTasks.map((completedTask) => (
                 <CompletedTask

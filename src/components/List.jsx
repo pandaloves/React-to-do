@@ -25,7 +25,7 @@ const List = ({
   };
 
   return (
-    <div className="flex flex-col gap-y-2 bg-green-600 sm:max-w-md lg:max-w-lg mx-auto">
+    <div className="flex flex-col gap-y-2 bg-green-600 sm:max-w-md lg:max-w-lg mx-auto mt-5 mb-8">
       {todos.length > 0 && (
         <div className="p-2 overflow-y-auto shadow rounded-xl min-w-full">
           <h4 className="ml-2 text-white">Task(s) to do</h4>

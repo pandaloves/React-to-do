@@ -25,38 +25,36 @@ const List = ({
   };
 
   return (
-    <div className="flex flex-col gap-y-2 bg-green-600">
+    <div className="flex flex-col gap-y-2 bg-green-600 sm:max-w-md lg:max-w-lg mx-auto">
       {todos.length > 0 && (
-        <div className="p-2 overflow-y-auto relative shadow rounded-xl ml-1 min-w-64 max-w-sm">
+        <div className="p-2 overflow-y-auto shadow rounded-xl min-w-full">
           <h4 className="ml-2 text-white">Task(s) to do</h4>
-          {todos &&
-            todos.map((todo) => (
-              <TodoItem
-                key={uuidv4()}
-                todo={todo}
-                todos={todos}
-                setTodos={setTodos}
-                completedTasks={completedTasks}
-                setCompletedTasks={setCompletedTasks}
-                updateTodo={updateTodo}
-                deleteTodo={deleteTodo}
-              />
-            ))}
+          {todos.map((todo) => (
+            <TodoItem
+              key={uuidv4()}
+              todo={todo}
+              todos={todos}
+              setTodos={setTodos}
+              completedTasks={completedTasks}
+              setCompletedTasks={setCompletedTasks}
+              updateTodo={updateTodo}
+              deleteTodo={deleteTodo}
+            />
+          ))}
         </div>
       )}
 
-      <div className="flex flex-col gap-y-2 bg-green-700">
+      <div className="bg-green-700">
         {completedTasks.length > 0 && (
-          <div className="p-2 overflow-y-auto relative shadow rounded-xl ml-1 min-w-64 max-w-sm">
+          <div className="p-2 shadow rounded-xl min-w-full">
             <h4 className="text-white">Task(s) done</h4>
-            {completedTasks &&
-              completedTasks.map((completedTask) => (
-                <CompletedTask
-                  key={uuidv4()}
-                  completedTask={completedTask}
-                  deleteCompletedTask={deleteCompletedTask}
-                />
-              ))}
+            {completedTasks.map((completedTask) => (
+              <CompletedTask
+                key={uuidv4()}
+                completedTask={completedTask}
+                deleteCompletedTask={deleteCompletedTask}
+              />
+            ))}
           </div>
         )}
       </div>

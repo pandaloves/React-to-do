@@ -28,9 +28,11 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col h-screen justify-between">
-        <div className="flex justify-center">
-          <div className="columns-1 bg-green-800">
+      <div className="flex flex-col h-screen justify-between mt-10 mx-auto max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
+        <div className="flex justify-center items-center">
+          {" "}
+          {/* Center horizontally and vertically */}
+          <div className="w-full bg-green-800 p-5 rounded-lg">
             <h1 className="text-center my-3 text-white font-mono text-lg font-semibold">
               Todo App
             </h1>
@@ -38,8 +40,9 @@ function App() {
               You have {todos.length} task(s) to do and {completedTasks.length}{" "}
               task(s) completed.
             </h3>
-            <Header addTodo={addTodo} reset={reset} />
-
+            <div className="flex justify-center items-center">
+              <Header addTodo={addTodo} reset={reset} />
+            </div>
             <List
               todos={todos}
               setTodos={setTodos}

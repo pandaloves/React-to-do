@@ -18,26 +18,24 @@ const Header = ({ addTodo, reset }) => {
 
   return (
     <>
-      <div className="container mx-52 md:mx-44 sm:mx-36 xs:mx-28 my-auto">
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row items-center"
-        >
+      <div className="container mx-48 my-auto">
+        <form onSubmit={handleSubmit} className="flex flex-row items-center">
+          {/* Input field for adding a new task */}
           <input
-            className="w-full sm:w-64 ml-3 mr-1 my-2 px-2 border rounded-sm border-slate-500 text-sm"
+            className="w-52 sm:w-44 ml-3 mr-1 my-2 px-2 border rounded-sm border-slate-500 text-sm"
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter a task here"
           />
           <button
-            className="py-1 px-3 w-full sm:w-16 h-6 my-2 bg-sky-600 text-white font-semibold rounded-full shadow-md hover:bg-sky-700 focus:outline-none focus:ring mx-1 text-xs"
+            className="py-1 px-3 w-12 h-6 my-2 bg-sky-600 text-white font-semibold rounded-full shadow-md hover:bg-sky-700 focus:outline-none focus:ring mx-1 text-xs"
             type="submit"
           >
             Add
           </button>
           <button
-            className="py-1 px-2 w-full sm:w-16 h-6 my-2 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring text-xs"
+            className="py-1 px-2 w-12 h-6 my-2 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring text-xs"
             onClick={reset}
           >
             Reset

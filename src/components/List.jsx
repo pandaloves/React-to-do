@@ -25,7 +25,8 @@ const List = ({
   };
 
   return (
-    <div className="flex flex-col gap-y-2 bg-green-600 sm:max-w-md lg:max-w-lg mx-auto mt-5 mb-8">
+    <div className="flex flex-col gap-y-2 bg-green-600 sm:max-w-md lg:max-w-lg  mt-5 mb-8">
+      {/* Section for tasks to do */}
       {todos.length > 0 && (
         <div className="p-2 overflow-y-auto shadow rounded-xl min-w-full">
           <h4 className="ml-2 text-white">Task(s) to do</h4>
@@ -44,6 +45,7 @@ const List = ({
         </div>
       )}
 
+      {/* Section for completed tasks */}
       <div className="bg-green-700">
         {completedTasks.length > 0 && (
           <div className="p-2 shadow rounded-xl min-w-full">

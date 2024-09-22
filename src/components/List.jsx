@@ -47,7 +47,7 @@ const List = ({
       <div className="bg-green-700">
         {completedTasks.length > 0 && (
           <div className="p-2 shadow rounded-xl min-w-full">
-            <h4 className="text-white">Task(s) done</h4>
+            <h4 className="text-yellow-500">Task(s) done</h4>
             {completedTasks.map((completedTask) => (
               <CompletedTask
                 key={uuidv4()}

@@ -18,7 +18,7 @@ const Header = ({ addTodo, reset }) => {
 
   return (
     <>
-      <div className="container mx-auto max-w-md my-auto">
+      <div className="container mx-52 md:mx-44 sm:mx-36 xs:mx-28 my-auto">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row items-center"

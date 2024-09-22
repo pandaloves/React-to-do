@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import List from "./components/List";
+import Footer from "./components/Footer";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -34,7 +35,14 @@ function App() {
               Todo App
             </h1>
             <h3 className="text-center my-3 text-white font-mono text-xs">
-              You have {todos.length} task(s) to do and {completedTasks.length}{" "}
+              You have
+              <span className="text-yellow-500 font-bold mx-2 my-auto">
+                {todos.length}
+              </span>
+              task(s) to do and{" "}
+              <span className="text-yellow-500 font-bold mx-2 my-auto">
+                {completedTasks.length}
+              </span>
               task(s) completed.
             </h3>
             <div className="flex justify-center items-center">
@@ -51,6 +59,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

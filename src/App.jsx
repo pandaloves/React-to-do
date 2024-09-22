@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col h-screen justify-between mt-10 mx-auto max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
+      <div className="flex flex-col h-screen justify-between mt-10 mx-auto xs:mx-5 max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl">
         <div className="flex justify-center items-center">
           <div className="w-full bg-green-800 p-5 rounded-lg">
             <h1 className="text-center my-3 text-white font-mono text-lg font-semibold">
